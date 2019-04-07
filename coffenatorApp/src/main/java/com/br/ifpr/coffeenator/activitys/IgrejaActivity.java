@@ -28,11 +28,6 @@ public class IgrejaActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-        //Fullscreen
-        requestWindowFeature(Window.FEATURE_NO_TITLE);
-        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
-
         setContentView(R.layout.activity_igreja);
         if(!PS.isEntrouNaIgreja()) {
             MyAlertDialogConstructor.showMessage(getString(R.string.tPadre), getString(R.string.padreBoasVindas), this);
