@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/casaLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/casa_interior">
+
+    <Button
+        android:id="@+id/btnVoltar"
+        android:layout_width="79dp"
+        android:layout_height="154dp"
+        android:background="#00000000"
+        android:onClick="onBtnVoltarCasaClick"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.675"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.9" />
+
+    <Button
+        android:id="@+id/btnStatus"
+        android:layout_width="135dp"
+        android:layout_height="60dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        android:onClick="onBtnStatusCasaClick"
+        android:text="Status"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/btnOpcoes"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:background="#00000000"
+        android:onClick="onBtnOpcoesCasaClick"
+        android:scaleType="fitCenter"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/engrenagem" />
+
+    <Button
+        android:id="@+id/btnDormir"
+        android:layout_width="182dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
+        android:background="@drawable/cama"
+        android:onClick="onBtnDormirCasaClick"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnSuicidio"
+        android:layout_width="108dp"
+        android:layout_height="221dp"
+        android:background="@drawable/ventilador"
+        android:onClick="onBtnSuicidioCasaClick"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnProcurarCafe"
+        android:layout_width="0dp"
+        android:layout_height="165dp"
+        android:layout_marginBottom="9dp"
+        android:layout_marginEnd="6dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="6dp"
+        android:layout_marginStart="24dp"
+        android:background="@android:color/transparent"
+        android:onClick="onBtnProcurarCafeCasaClick"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnVoltar" />
+</android.support.constraint.ConstraintLayout>

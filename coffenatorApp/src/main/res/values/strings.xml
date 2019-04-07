@@ -1,0 +1,291 @@
+<resources>
+    <!-- Strings criadas automaticamente (melhor não mexer) -->
+    <string name="app_name">Coffeenator</string>
+    <string name="action_settings">Settings</string>
+    <string name="action_example">Example action</string>
+
+    <string name="diarioDia">Dia </string>
+    <string name="tConfirmar">Confirmar</string>
+    <string name="cConfirmar">Tem certeza de que deseja fazer isso?</string>
+
+
+    <string name="jogoEmDesenvolvimento">Esse jogo ainda está em fase de desenvolvimento. Ainda há muitas coisas a serem melhoradas e bugs para serem corrigidos. Por favor, se encontrar algo que não lhe agrade, tenha paciência.</string>
+
+    <!-- Estáticos -->
+    <!-- Instruções -->
+    <string name="tIntrucoes">Instruções</string>
+    <string name="instrucoes">Esse simulador é um jogo “point-and-click”, ou seja, para que as ações sejam executadas, é necessário clicar nos objetos e botões.</string>
+    <string name="instrocoesProgramar">Para programar, é necessário clicar nos botões em ordem crescente (1, 2 e 3) até que a barra de progresso se encha. </string>
+    <string name="instrucoesExorcizar">Para exorcizar, é necessário clicar nas bíblias e desviar dos objetos caindo.</string>
+    <string name="instrucoesStatus">- Fome: quando chegar em 10, você morre.\n - Sede: quando chegar em 10, você morre.\n - Energia: quando chegar em 0, você morre.\n - Inteligencia: torna programação mais simples e mais bem remunerada (necessário para conseguir um emprego).\n - Fé: ajuda na batalha contra demônios.</string>
+
+        <!-- Créditos -->
+            <string name="tCreditos">Créditos</string>
+            <string name="jogoDe">Jogo de:</string>
+            <string name="edison">Edison Furusato</string>
+            <string name="guilherme">Guilherme Moraes</string>
+            <string name="gustavo">Gustavo Pasqualli</string>
+            <string name="jean">Jean Tomé</string>
+
+        <!-- Falas -->
+            <!-- Caio -->
+                <!-- Normal -->
+                    <string name="caioBoasVindas">Bem-vindo ao F Oda Bar, precisa de algo?</string>
+                    <string name="caioPedirCafe">Aqui está uma xícara de café.</string>
+                    <string name="caioPedirMiojo">Aqui está um prato de miojo.</string>
+                    <string name="caioAgua">Aqui está um copo da água.</string>
+
+                <!-- Insano -->
+                    <string name="caioBoasVindasInsano">Bem-vindo ao Bar Infernal do Gordo, o que deseja?</string>
+                    <string name="caioRestaurarSanidade">Talvez consiga o que quer derrotando meu chefe. Para isso, vai precisar de um crucifixo.</string>
+                    <string name="caioCrucifixo">O meu crucifixo? Não posso dá-lo a você, ele é meu!</string>
+
+                    <string name="tVenceuCaio">Derrotou Caio</string>
+                    <string name="cVenceuCaio">Aqui está o crucifixo. Mas devo te avisar que meu chefe é implácavel!</string>
+
+                    <string name="cComprarComida">Aqui está, uma rosquinha.</string>
+                    <string name="f_cComprarComida">Você não tem dinheiro, volte quando tiver.</string>
+                    <string name="cComprarAgua">Aqui está, uma garrafa de água.</string>
+                    <string name="f_cComprarAgua">Você não tem dinheiro, volte quando tiver.</string>
+
+                    <string name="cComprarCafe">Aqui está, uma xícara de café. Você parece bem feliz.</string>
+                    <string name="f_cComprarCafe">Você não tem dinheiro, volte quando tiver.</string>
+
+
+    <!-- Únicas -->
+            <string name="diarioIntroducao">Meu nome é Edison, vivo em uma cidade pequena e estou desempregado. Depois do preço do café aumentar porque estão roubando todas as entregas da cidade, decidi arrumar um emprego. Talvez não ter feito a faculdade não tenha sido a melhor ideia, já que fui rejeitado por todas as empresas para as quais mandei meu currículo. Acho que a única coisa que me mantia de pé eram as corriqueiras xícaras de café que tomava todo dia.</string>
+            <string name="diarioLojinha">fui à loja e encontrei um funcionário muito... grande. Por sorte, ainda consigo comprar água, comida e, mais importante, café. Espero que eu consiga um emprego.</string>
+            <string name="diarioEstudar">comecei a estudar em uma biblioteca próxima à minha casa. Peguei alguns livros na área de informática e achei interessante, então espero poder achar um emprego nessa área. Parece divertido.</string>
+            <string name="diarioEmprego">finalmente, após ter estudado e tentado por tanto tempo, consegui arranjar um emprego em uma empresa de TI, a Tieppo Productions. O chefe não parece ser uma pessoa ruim, então minha vida deve começar a melhorar a partir de agora.</string>
+            <string name="diarioRezar">fui à igreja pela primeira vez, onde conheci o padre Felipe. Ele me parece um pouco estranho, não sei porquê...</string>
+            <string name="diarioInsano">Não aguento mais. Café... Preciso de café...</string>
+            <string name="diarioSuspeitarPadre">Acho que o padre tem alguma conexão com o roubo do café...</string>
+            <string name="diarioPadrao">Nada de novo aconteceu hoje.</string>
+            <string name="diarioPaquerar">fiz algo terrível. Encontrei uma mulher muito simpática que trabalha na biblioteca, e acabei paquerando um pouco ela. Depois disso, ela me disse que já estava em um relacionamento e então descobri que seu marido é meu chefe. Espero que ele não descubra.</string>
+
+            <string name="mortePadre">Depois de atacar o padre, você foi preso sem provas de que ele roubou café. Aparentemente, ele apenas odeia a bebida.</string>
+    <string name="oFinal">Diário\n\nDepois de atacar o dono da loja, ele confessou que estava roubando todo o café para aumentar o preço e é preso. A Joojle cresceu e se tornou uma multinacional. Eu fui para a faculdade de Ciências da Computação, fui promovido e comprei uma máquina de café. Além disso, meu chefe e a bibliotecária se casaram e padre Felipe foi preso por roubar dinheiro da igreja.\n\nFIM\n\n</string>
+
+    <!-- AlertDialogs -->
+        <!-- Mortes -->
+            <string name="tituloDasMortes">Morte</string>
+            <string name="mortePorPaquera">Você foi assassinado enquanto dormia. A perícia encontrou uma gravata azul no local.</string>
+            <string name="mortePorFome">Você morreu de fome.</string>
+            <string name="mortePorSede">Você morreu de sede.</string>
+            <string name="mortePorEnergia">Você morreu de cansaço.</string>
+            <string name="mortePorSuicidio">Você escolheu a saída mais fácil.</string>
+            <string name="mortePorSerDemitido">Você foi demitido. Depois de alguns dias sem comer, você morreu.</string>
+            <string name="morteEmBatalha">Você morreu.</string>
+            <string name="mortePorVenderAAlma">Você vendeu sua alma.</string>
+            <string name="mortePorTrabalhar">Você não trabalha aqui!\nVocê viu arquivos que não deveria ter visto... Agentes do governo entram no local e te prendem.</string>
+
+
+    <!-- Outros -->
+            <!-- Casa -->
+            <string name="tDomir">Dormir</string>
+            <string name="cDormir">Você dormiu.</string>
+
+            <string name="tProcurarCafe">Procurando...</string>
+            <string name="cProcurarCafe">Procurando... Infelizmente, você não encontrou café.</string>
+
+            <!-- Igreja -->
+            <string name="tRezar">Rezar</string>
+            <string name="cRezar">Você se sente mais próximo de Deus.</string>
+
+            <string name="tBeberAguaBenta">Beber Água Benta</string>
+            <string name="cBeberAguaBenta">Você bebeu água benta e foi expulso da igreja.</string>
+
+                <!-- Padre Felipe -->
+
+                <string name="tPadre">Padre Felipe</string>
+
+                <string name="padreDoarSucesso">- Obrigado pela colaboração com o projeto.</string>
+                <string name="padreDoarFracasso">- Pecador maldito. Não apareça nunca mais aqui.</string>
+
+                <string name="padrePrimeiro">- Olá, quantos anos você tem? Ah, que pena... já é muito velho para o projeto...</string>
+                <string name="padreProjeto">- Falar sobre meu projeto com os garotos? Acho que você ainda não tem fé suficiente...</string>
+                <string name="padreBoasVindas">- Bem-vindo irmão, o que deseja na casa de Deus?</string>
+                <string name="padreDoar">- Quanto dinheiro você vai doar para mi... quer dizer, para a igreja?</string>
+                <string name="padreRezar">- Isso, irmão, ajoelhou... precisa rezar.</string>
+
+                <string name="padreIProjetoInsano">- Ah, aquele projeto? Achei melhor parar com aquilo... Não me parecia certo.</string>
+                <string name="padreIBoasVindasInsano">- Bem-vindo irmão, o que deseja na casa de Deus?</string>
+                <string name="padreIDoarInsano">- Ah, não há necessidade disso irmão. A igreja já possui fundos suficientes, apenas reze em nome de Deus.</string>
+                <string name="padreIRezarInsano">- Não vou perturbá-lo.</string>
+
+            <!-- Biblioteca -->
+            <string name="tEstudar">Estudar</string>
+            <string name="cEstudar">Você estudou e ficou mais inteligente.</string>
+
+            <string name="cPaquerar">- Já te falei que tenho marido. Agora faça silêncio!</string>
+
+            <string name="cPedirCafe">- Não temos café por aqui.</string>
+
+                <!-- Bibliotecária -->
+                <string name="tBiblio">Carol</string>
+                <string name="biblioBoasVindas">- Bem-vindo, faça silêncio, por favor.</string>
+                <string name="biblioPaquera">- Oh, me desculpe, mas já sou casada. ele trabalha em uma empresa de TI aqui perto.</string>
+                <string name="biblioSilencio">- Shhhh...</string>
+
+            <!-- Trabalho -->
+
+            <string name="tFazerEntrevista">Entrevista</string>
+            <string name="cFazerEntrevista">Deseja fazer a entrevista para o emprego?</string>
+            <string name="f_tFazerEntrevista">Como assim?</string>
+            <string name="f_cFazerEntrevista">Você já trabalha aqui!</string>
+
+            <string name="tMaquinaDeCafe">Máquina de café</string>
+            <string name="cMaquinaDeCafe">Não há café aqui.</string>
+            <string name="f_tMaquinaDeCafe">Máquina de café.</string>
+            <string name="f_cMaquinaDeCafe">Alguém vê você mexendo na máquina de café... Você foi expulso do local.</string>
+
+                <!-- Chefe -->
+                <string name="tChefe">Celso</string>
+                <string name="cFoiContratado">- Parabéns por conseguir a vaga e seja bem-vindo à Joojle, você pode começar a trabalhar... imediatamente.</string>
+                <string name="f_cFoiContrado">Que pena, você não tem o necessário para entrar na empresa. Talvez estudar TI fosse uma boa ideia.</string>
+                <string name="cAprenderChefe">- Quer aprender comigo? Claro, por que não?</string>
+                <string name="cReceberSalario">- Nossa, você faz isso parecer tão fácil. Parece até que o código aparece magicamente na sua tela.</string>
+
+                <string name="chefeInsano">- Sons de fritura...</string>
+
+            <!-- Inferno -->
+                <!-- Rodolfo -->
+                <string name="tRodolfo">Rodolfo</string>
+                <string name="encontrarRodolfo">- EU SOU O GRANDE DEMÔNIO MESTRE DO SUBMUNDO. Meus amigos me chamam de Rodolfo. O que deseja aqui?</string>
+                <string name="batalharRodolfo">- Muito bem, vamos nos divertir um pouco.</string>
+                <string name="venderAlmaRodolfo">- Ok, se é o que deseja...</string>
+
+
+    <!-- Buttons -->
+    <string name="sim">Sim</string>
+    <string name="depois">Talvez depois...</string>
+
+</resources>
+
+
+    <!-- The Game Piraquara -->
+    <!-- AlertDialogs -->
+    <!-- Mortes -->
+    <!--<string name="tituloDasMortes">Você morreu...</string>-->
+    <!--<string name="mortePorFome">Você ficou com tanta fome que virou do avesso</string>-->
+    <!--<string name="mortePorSede">Você morreu de sede</string>-->
+    <!--<string name="mortePorEnergia">Você ficou tão cansado que não aguentava nem mais viver</string>-->
+    <!--<string name="mortePorBanheiro">Você não usou o banheiro e acabou explodindo</string>-->
+    <!--<string name="mortePorVida">Você morreu</string>-->
+
+    <!--<string name="morteComeuMaca">Você usa seu arco para alcançar as maçãs.\n elas estavam envenenadas</string>-->
+    <!--<string name="mortePularDaPonte">Você pulou da ponte mas caiu e foi devorado por jacarés</string>-->
+    <!--<string name="morteAtravessarSemPonte">Você tentou atravessar a ponte mas ela estava quebrada e você cai no rio cheio de jacarés</string>-->
+    <!--<string name="morteNadar">Você não sabe nadar</string>-->
+    <!--<string name="morteUsarOBanheiro">Você entrou no banheiro errado e foi devorado por jacarés</string>-->
+    <!--<string name="morteFugirDaBatalha">Ele rolou sobre você</string>-->
+    <!--<string name="morteEmBatalha">Você morreu</string>-->
+    <!--<string name="mortePaquerouMulherDoPaje">Pajé te matou por causa da mulher dele</string>-->
+
+    <!--&lt;!&ndash; Others &ndash;&gt;-->
+    <!--<string name="tTreinarPontaria">Treinar Pontaria</string>-->
+    <!--<string name="cTreinarPontaria">Você melhorou suas técnicas com o arco</string>-->
+    <!--<string name="f_tTreinarPontaria">Falhou em treinar</string>-->
+    <!--<string name="f_cTreinarPontaria">Você precisa de pelo menos um arco e uma flecha para treinar pontaria</string>-->
+
+    <!--<string name="tFabricarFlecha">Fabricar flecha</string>-->
+    <!--<string name="cFabricarFlecha">Você fabricou uma flecha</string>-->
+    <!--<string name="f_tFabricarFlecha">Fracassou em fabricar uma flecha</string>-->
+    <!--<string name="f_cFabricarFlecha">Você precisa de pelo menos 1 madeira e 2 penas para fabricar uma flecha</string>-->
+
+    <!--<string name="tColetarMadeira">Coletar madeira</string>-->
+    <!--<string name="cColetarMadeira">Você coletou uma madeira</string>-->
+
+    <!--<string name="f_tComerMaca">Falhou em comer as maçãs</string>-->
+    <!--<string name="f_cComerMaca">As maçãs estão muito no alto... Você precisa de algo para te ajudar a alcançá-las</string>-->
+
+    <!--<string name="tCacarPavao">Caçar pavão</string>-->
+    <!--<string name="cCacarPavao">você caçou um pavão e pegou duas penas</string>-->
+    <!--<string name="f_tCacarPavao">Falhou em caçar pavão</string>-->
+    <!--<string name="f_cCacarPavao">Você precisa de um arco</string>-->
+
+    <!--<string name="tSocarArvores">Socar árvores</string>-->
+    <!--<string name="cSocarArvores">Você socou as árvores e ficou mais forte e resistente</string>-->
+
+    <!--<string name="tSerCurado">Você foi curado</string>-->
+    <!--<string name="cSerCurado">O pajé mandou umas mandinga braba e você foi curado</string>-->
+    <!--<string name="f_tSerCurado">Falhou em ser curado</string>-->
+    <!--<string name="f_cSerCurado">Você não tem o que o pajé quer</string>-->
+
+    <!--<string name="tSerAprendiz">Você virou aprendiz</string>-->
+    <!--<string name="cSerAprendiz">O pajé gostou de você e te aceitou como aprendiz</string>-->
+    <!--<string name="f_tSerAprendiz">Falhou em ser aprendiz</string>-->
+    <!--<string name="f_cSerAprendiz">O pajé descobriu que você deu em cima da mulher dele e ficou puto</string>-->
+
+    <!--<string name="tTreinarMagia">Treinar magia</string>-->
+    <!--<string name="cTreinarMagia">Você treinou as mandingas do pajé e as suas magias ficaram mais fortes</string>-->
+
+    <!--<string name="f_tConsertarPonte">Recursos Insuficientes...</string>-->
+    <!--<string name="f_cConsertarPonte">Você precisa de pelo menos 10 madeiras para consertar a ponte</string>-->
+
+    <!--<string name="tPescarPeixe01">Pescou jacaré</string>-->
+    <!--<string name="cPescarPeixe01">Você pescou um jacaré</string>-->
+    <!--<string name="tPescarPeixe02">Pescou um peixe</string>-->
+    <!--<string name="cPescarPeixe02">Você pescou o peixe cabeçudo</string>-->
+    <!--<string name="tPescarPeixe03">Pescou um peixão</string>-->
+    <!--<string name="cPescarPeixe03">Você pescou o peixe Nareba</string>-->
+    <!--<string name="tPescarPeixe04">Pescou o peixe galinha</string>-->
+    <!--<string name="cPescarPeixe04">Você pescou o peixe galinha</string>-->
+    <!--<string name="tPescarPeixe05">Pescou uma Bialeia!!!!</string>-->
+    <!--<string name="cPescarPeixe05">Você pescou o maior peixe de piraquara</string>-->
+    <!--<string name="f_tPescarPeixe">Falhou em pescar peixe</string>-->
+    <!--<string name="f_cPescarPeixe">Você precisa de uma vara de pesca</string>-->
+
+    <!--<string name="tBeberAqua">Beber aqua</string>-->
+    <!--<string name="cBeberAqua">Você bebeu água</string>-->
+
+    <!--<string name="tCagar">Você cagou</string>-->
+    <!--<string name="cCagar">Você cagou no rio</string>-->
+
+    <!--<string name="tTomarBanho">Tomar banho</string>-->
+    <!--<string name="cTomarBanho">Você tomou banho e ficou limpinho</string>-->
+
+    <!--<string name="tDormir">ZZzzZZzZzZZ...</string>-->
+    <!--<string name="cDormir">Você dormiu como um jacarézinho</string>-->
+    <!--<string name="f_tDomir">Recursos Insuficientes...</string>-->
+    <!--<string name="f_cDormir">Você precisa de 3 comidas para alugar a Oca</string>-->
+
+    <!--<string name="tComer">Comer</string>-->
+    <!--<string name="cComer">Você come um delicioso peixe</string>-->
+    <!--<string name="f_tComer">Falhou em comer</string>-->
+    <!--<string name="f_cComer">Você não tem comida</string>-->
+
+    <!--<string name="tPaquerarMulherDoPaje">Paquerar mulher do pajé</string>-->
+    <!--<string name="cPaquerarMulherDoPaje">Ela nem te da bola</string>-->
+
+    <!--<string name="tComprarArco">Comprar arco</string>-->
+    <!--<string name="cComprarArco">Agora você tem um arco</string>-->
+    <!--<string name="f_tComprarArco">Falhou em comprar arco</string>-->
+    <!--<string name="f_cComprarArco">É muito caro...</string>-->
+
+    <!--<string name="tComprarVara">Comprar vara</string>-->
+    <!--<string name="cComprarVara">Agora você tem uma vara de pesca</string>-->
+    <!--<string name="f_tComprarVara">Falhou em comprar vara</string>-->
+    <!--<string name="f_cComprarVara">É muito caro...</string>-->
+
+    <!--<string name="tUsarArco">Atirar com o arco</string>-->
+    <!--<string name="cUsarArco">Você acertou a flecha</string>-->
+    <!--<string name="f_tUsarArco">Falhou em atirar com o arco</string>-->
+    <!--<string name="f_cUsarArco">Você precisa de um arco e de uma flecha</string>-->
+
+    <!--<string name="tEscolherMagia">Escolher Magia</string>-->
+    <!--<string name="cEscolherMagia">Qual magia usar?</string>-->
+    <!--<string name="MagiaDeDano">Bola de fogo</string>-->
+    <!--<string name="MagiaDeCura">Cura</string>-->
+    <!--<string name="f_tUsarMagia">Falhou em usar magia</string>-->
+    <!--<string name="f_cUsarMagia">Você balança seus braços no ar e isso não tem efeito algum</string>-->
+
+    <!--<string name="tAlimentarBoss">Alimentar</string>-->
+    <!--<string name="cAlimentarBoss">A batalha se torna um pouco menos dificil</string>-->
+    <!--<string name="f_tAlimentarBoss">Falhou em alimentar</string>-->
+    <!--<string name="f_cAlimentarBoss">Você não tem comida suficiente</string>-->
+
+    <!--<string name="tHistoriaPaje">História do Pajé</string>-->
+    <!--<string name="cHistoriaPaje">Meu nome é Bilbo, eu sou Pajé da tribo dos Pocasombra. Quando o café do nosso mundo acabou, sabia que tudo estava perdido, por isso busquei a salvação nas técnicas mágicas de cultivo do café, eu sou um mestre curandeiro na arte mística da manipulação do café, mas isso não é o suficiente para suprir a necessidade de café do nosso mundo, mas existe uma única salvação, ache a última semente e salve nosso mundo.</string>-->
+
+    <!--<string name="btnPaquerar">Paquerar a mulher do pajé</string>-->

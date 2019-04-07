@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.br.ifpr.coffeenator">
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"></uses-permission>
+    <uses-permission android:name="android.permission.INTERNET"></uses-permission>
+    <application
+        android:allowBackup="true"
+        android:hardwareAccelerated="false"
+        android:largeHeap="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:usesCleartextTraffic="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name="com.br.ifpr.coffeenator.activitys.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name="com.br.ifpr.coffeenator.activitys.CadastroActivity"></activity>
+        <activity android:name="com.br.ifpr.coffeenator.activitys.CreditosActivity" android:screenOrientation="sensorLandscape"></activity>
+        <activity android:name="com.br.ifpr.coffeenator.activitys.InstrucoesActivity" android:screenOrientation="sensorLandscape"></activity>
+        <activity android:name="com.br.ifpr.coffeenator.activitys.Mapa01Activity" android:screenOrientation="sensorLandscape"></activity>
+        <activity android:name="com.br.ifpr.coffeenator.activitys.Mapa02Activity" android:screenOrientation="sensorLandscape"></activity>
+        <activity android:name="com.br.ifpr.coffeenator.activitys.Mapa03Activity" android:screenOrientation="sensorLandscape"></activity>
+        <activity android:name="com.br.ifpr.coffeenator.activitys.MenuActivity" android:screenOrientation="sensorLandscape"></activity>
+        <activity android:name="com.br.ifpr.coffeenator.activitys.OpcoesActivity" android:screenOrientation="sensorLandscape"></activity>
+        <activity android:name="com.br.ifpr.coffeenator.activitys.StatusActivity" android:screenOrientation="sensorLandscape"></activity>
+        <activity android:name="com.br.ifpr.coffeenator.activitys.CasaActivity" android:screenOrientation="sensorLandscape"></activity>
+        <activity android:name="com.br.ifpr.coffeenator.activitys.BibliotecaActivity" android:screenOrientation="sensorLandscape"></activity>
+        <activity android:name="com.br.ifpr.coffeenator.activitys.IgrejaActivity" android:screenOrientation="sensorLandscape"></activity>
+        <activity android:name="com.br.ifpr.coffeenator.activitys.LojaActivity" android:screenOrientation="sensorLandscape"></activity>
+        <activity android:name="com.br.ifpr.coffeenator.activitys.TrabalhoActivity" android:screenOrientation="sensorLandscape"></activity>
+        <activity android:name="com.br.ifpr.coffeenator.activitys.TrabalhandoActivity" android:screenOrientation="sensorLandscape"></activity>
+        <activity android:name="com.br.ifpr.coffeenator.activitys.BatalhaBossActivity" android:screenOrientation="sensorLandscape"></activity>
+        <activity android:name="com.br.ifpr.coffeenator.activitys.MiniGameEsquivarActivity" android:screenOrientation="sensorLandscape"></activity>
+        <activity android:name="com.br.ifpr.coffeenator.activitys.FinalActivity" android:screenOrientation="sensorLandscape"></activity>
+        <activity android:name=".activitys.HistoricoActivity" android:screenOrientation="sensorLandscape"></activity>
+        <activity android:name=".activitys.RankingActivity" android:screenOrientation="sensorLandscape"></activity>
+    </application>
+
+</manifest>

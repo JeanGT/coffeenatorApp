@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#ff4081</color>
+
+    <color name="colorStatusText">#CCCCCC</color>
+
+    <color name="colorFome">#ea8c55</color>
+    <color name="colorSede">#79c7c5</color>
+    <color name="colorInteligencia">#5F506B</color>
+    <color name="colorFe">#CCDBDC</color>
+    <color name="colorSanidade">#967D69</color>
+    <color name="colorEnergia">#fffd98</color>
+    <color name="colorVida">#a50104</color>
+    <color name="colorVerde">#069E2D</color>
+    <color name="colorVermelho">#C1292E</color>
+</resources>
