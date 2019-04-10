@@ -326,7 +326,7 @@ public class PS {
         PS.nome = nome;
     }
 
-    public static String getStringByState(){
+    public static void saveGame(){
         String state = nome;
 
         state += "/" + fome;
@@ -346,7 +346,6 @@ public class PS {
         state += "/" + programou;
         state += "/" + entrouNosStatus;
 
-        return  state;
     }
 
     public static void setStateByString(String state){
