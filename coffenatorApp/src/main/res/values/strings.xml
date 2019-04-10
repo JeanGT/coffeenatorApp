@@ -4,6 +4,8 @@
     <string name="action_settings">Settings</string>
     <string name="action_example">Example action</string>
 
+    <string name="salvarSucesso">Salvo com sucesso.</string>
+    <string name="salvarFracasso">Obrigado pela colaboração com o projeto.</string>
     <string name="diarioDia">Dia </string>
     <string name="tConfirmar">Confirmar</string>
     <string name="cConfirmar">Tem certeza de que deseja fazer isso?</string>

@@ -25,6 +25,8 @@ import java.util.Random;
 
 public class IgrejaActivity extends AppCompatActivity {
 
+    private int valorSalvar = 5;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,17 +43,50 @@ public class IgrejaActivity extends AppCompatActivity {
         ImageButton btnPadre = (ImageButton) findViewById(R.id.imgPadre);
         ConstraintLayout.LayoutParams params = (ConstraintLayout.LayoutParams) btnPadre.getLayoutParams();
         Random r = new Random();
-        params.horizontalBias = r.nextFloat(); // here is one modification for example. modify anything else you want :)
-        btnPadre.setLayoutParams(params); // request the view to use the new modified params
+        params.horizontalBias = r.nextFloat();
+        btnPadre.setLayoutParams(params);
     }
 
-    public void onBtnRezarIgrejaClick(View v){
-        PS.fazerAcao();
-        MyMediaPlayer.playButtonSound(this);
-        MyAlertDialogConstructor.showMessage(getString(R.string.tRezar), getString(R.string.cRezar) + rezar(), this);
-        if(PS.getFe() == 1){
-            Diario.addMensagem(R.string.diarioRezar);
-        }
+    public void onBtnAltarIgrejaClick(View v){
+        final Context contexto = this;
+
+        AlertDialog.Builder builder = new AlertDialog.Builder(contexto);
+        builder.setTitle(getString(R.string.padreDoar));
+
+        final EditText input = new EditText(contexto);
+        input.setInputType(InputType.TYPE_CLASS_NUMBER | InputType.TYPE_NUMBER_FLAG_DECIMAL);
+        builder.setView(input);
+
+        builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                String m_Text = input.getText().toString();
+                float valorDoado = Math.round(Float.parseFloat(m_Text) * 100) / 100;
+                if(valorDoado != 0){
+                    if(PS.getDinheiros() >= valorDoado) {
+                        PS.changeDinheiros(-valorDoado);
+                        if(valorDoado >= valorSalvar){
+                            MyAlertDialogConstructor.showMessage(getString(R.string.tPadre), getString(R.string.salvarSucesso), contexto);
+                        } else {
+                            MyAlertDialogConstructor.showMessage(getString(R.string.tPadre), getString(R.string.salvarFracasso), contexto);
+                        }
+                    } else {
+                        MyAlertDialogConstructor.showMessage(getString(R.string.tPadre), "Você não possui essa quantidade de dinheiro.", contexto);
+                    }
+                } else {
+                    setExpulso();
+                }
+            }
+        });
+        builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                setExpulso();
+                dialog.cancel();
+            }
+        });
+
+        builder.show();
     }
 
     private String rezar(){
@@ -106,40 +141,12 @@ public class IgrejaActivity extends AppCompatActivity {
         DialogInterface.OnClickListener btn02 = new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
-                AlertDialog.Builder builder = new AlertDialog.Builder(contexto);
-                builder.setTitle(getString(R.string.padreDoar));
-
-                final EditText input = new EditText(contexto);
-                input.setInputType(InputType.TYPE_CLASS_NUMBER | InputType.TYPE_NUMBER_FLAG_DECIMAL);
-                builder.setView(input);
-
-                builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        String m_Text = input.getText().toString();
-                        float valorDoado = Math.round(Float.parseFloat(m_Text) * 100) / 100;
-                        if(valorDoado != 0){
-                            if(PS.getDinheiros() >= valorDoado) {
-                                PS.changeDinheiros(-valorDoado);
-                                MyAlertDialogConstructor.showMessage(getString(R.string.tPadre), getString(R.string.padreDoarSucesso), contexto);
-                            } else {
-                                MyAlertDialogConstructor.showMessage(getString(R.string.tPadre), "Você não possui essa quantidade de dinheiro.", contexto);
-                            }
-                        } else {
-                           setExpulso();
-                        }
-                    }
-                });
-                builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        setExpulso();
-                        dialog.cancel();
-                    }
-                });
-
-                builder.show();
-                return;
+                PS.fazerAcao();
+                MyMediaPlayer.playButtonSound(contexto);
+                MyAlertDialogConstructor.showMessage(getString(R.string.tRezar), getString(R.string.cRezar) + rezar(), contexto);
+                if(PS.getFe() == 1){
+                    Diario.addMensagem(R.string.diarioRezar);
+                }
             }
         };
 
@@ -152,7 +159,7 @@ public class IgrejaActivity extends AppCompatActivity {
         };
 
         builder.setPositiveButton("Perguntar sobre o projeto", btn01);
-        builder.setNegativeButton("Doar", btn02);
+        builder.setNegativeButton("Rezar", btn02);
         builder.setNeutralButton("Atacar padre", btn03);
         builder.create().show();
     }

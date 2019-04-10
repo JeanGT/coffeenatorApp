@@ -325,4 +325,49 @@ public class PS {
     public static void setNome(String nome) {
         PS.nome = nome;
     }
+
+    public static String getStringByState(){
+        String state = nome;
+
+        state += "/" + fome;
+        state += "/" + sede;
+        state += "/" + energia;
+        state += "/" + sanidade;
+        state += "/" + fe;
+        state += "/" + inteligencia;
+        state += "/" + vida;
+        state += "/" + nAcoes;
+        state += "/" + dinheiros;
+        state += "/" + paquerouMulherDoChefe;
+        state += "/" + bebeuAguaBenta;
+        state += "/" + temEmprego;
+        state += "/" + entrouNaIgreja;
+        state += "/" + entrouNaLoja;
+        state += "/" + programou;
+        state += "/" + entrouNosStatus;
+
+        return  state;
+    }
+
+    public static void setStateByString(String state){
+        String[] splitedState = state.split("/");
+
+        nome = splitedState[0];
+        fome = Integer.parseInt(splitedState[1]);
+        sede = Integer.parseInt(splitedState[2]);
+        energia = Integer.parseInt(splitedState[3]);
+        sanidade = Integer.parseInt(splitedState[4]);
+        fe = Integer.parseInt(splitedState[5]);
+        inteligencia = Integer.parseInt(splitedState[6]);
+        vida = Integer.parseInt(splitedState[7]);
+        nAcoes = Integer.parseInt(splitedState[8]);
+        dinheiros = Float.parseFloat(splitedState[9]);
+        paquerouMulherDoChefe = Boolean.parseBoolean(splitedState[10]);
+        bebeuAguaBenta = Boolean.parseBoolean(splitedState[11]);
+        temEmprego = Boolean.parseBoolean(splitedState[12]);
+        entrouNaIgreja = Boolean.parseBoolean(splitedState[13]);
+        entrouNaLoja = Boolean.parseBoolean(splitedState[14]);
+        programou = Boolean.parseBoolean(splitedState[15]);
+        entrouNosStatus = Boolean.parseBoolean(splitedState[16]);
+    }
 }
