@@ -4,18 +4,24 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.br.ifpr.coffeenator.R;
 import com.br.ifpr.coffeenator.myclasses.DBConector;
+import com.br.ifpr.coffeenator.myclasses.Gif;
 
 import java.io.IOException;
 
 public class CadastroActivity extends AppCompatActivity {
+    Gif gif;
+    ImageView loadingImage;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +32,21 @@ public class CadastroActivity extends AppCompatActivity {
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
         setContentView(R.layout.activity_cadastro);
+
+        loadingImage = (ImageView) findViewById(R.id.imgLoadingCadastro);
+
+        //Mostra o gif de carregamento
+        Button btnLogin = findViewById(R.id.btnCadastrar);
+        btnLogin.setOnTouchListener(new View.OnTouchListener() {
+
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                loadingImage.setVisibility(View.VISIBLE);
+                gif = new Gif(100, loadingImage, R.drawable.fumaca03, R.drawable.fumaca02, R.drawable.fumaca01);
+                gif.play();
+                return false;
+            }
+        });
     }
 
     public void onBtnCadastrarClick(View v){
@@ -46,6 +67,8 @@ public class CadastroActivity extends AppCompatActivity {
                             e.printStackTrace();
                         }
                         if(deuCerto) {
+                            gif.stop();
+                            loadingImage.setVisibility(View.INVISIBLE);
                             Intent intent = new Intent(this, MainActivity.class);
                             startActivity(intent);
                         } else {
@@ -63,7 +86,8 @@ public class CadastroActivity extends AppCompatActivity {
         } else {
             Toast.makeText(this, "O nome deve possuir de 4 a 20 caracteres.", Toast.LENGTH_LONG).show();;
         }
-
+        loadingImage.setVisibility(View.INVISIBLE);
+        gif.stop();
     }
 
     @Override
