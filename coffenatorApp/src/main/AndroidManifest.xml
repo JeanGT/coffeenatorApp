@@ -39,6 +39,7 @@
         <activity android:name="com.br.ifpr.coffeenator.activitys.BatalhaBossActivity" android:screenOrientation="sensorLandscape"></activity>
         <activity android:name="com.br.ifpr.coffeenator.activitys.MiniGameEsquivarActivity" android:screenOrientation="sensorLandscape"></activity>
         <activity android:name="com.br.ifpr.coffeenator.activitys.FinalActivity" android:screenOrientation="sensorLandscape"></activity>
+        <activity android:name="com.br.ifpr.coffeenator.activitys.DojoActivity" android:screenOrientation="sensorLandscape"></activity>
         <activity android:name=".activitys.HistoricoActivity" android:screenOrientation="sensorLandscape"></activity>
         <activity android:name=".activitys.RankingActivity" android:screenOrientation="sensorLandscape"></activity>
     </application>

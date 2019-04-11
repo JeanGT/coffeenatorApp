@@ -19,11 +19,6 @@ public class Mapa01Activity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-        //Fullscreen
-        requestWindowFeature(Window.FEATURE_NO_TITLE);
-        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
-
         setContentView(R.layout.activity_mapa_01);
         if(PS.getSanidade() < 2){
             ImageView bg = (ImageView) findViewById(R.id.imgBg1);
@@ -63,7 +58,7 @@ public class Mapa01Activity extends AppCompatActivity {
             if (PS.isBebeuAguaBenta()) {
                 MyAlertDialogConstructor.showMessage("Expulso", "Voce foi banido da igreja.", this);
             } else {
-                Intent intent = new Intent(this, IgrejaActivity.class);
+                Intent intent = new Intent(this, DojoActivity.class);
                 startActivity(intent);
             }
         }
