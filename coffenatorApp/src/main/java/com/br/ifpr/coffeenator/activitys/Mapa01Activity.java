@@ -58,7 +58,7 @@ public class Mapa01Activity extends AppCompatActivity {
             if (PS.isBebeuAguaBenta()) {
                 MyAlertDialogConstructor.showMessage("Expulso", "Voce foi banido da igreja.", this);
             } else {
-                Intent intent = new Intent(this, DojoActivity.class);
+                Intent intent = new Intent(this, IgrejaActivity.class);
                 startActivity(intent);
             }
         }

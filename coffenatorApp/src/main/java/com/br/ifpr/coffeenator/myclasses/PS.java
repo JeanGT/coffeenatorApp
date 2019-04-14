@@ -1,14 +1,22 @@
 package com.br.ifpr.coffeenator.myclasses;
 
 import android.content.Context;
+import android.content.SharedPreferences;
+import android.os.Debug;
+import android.util.Log;
 import android.widget.Toast;
 
 import com.br.ifpr.coffeenator.R;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Date;
 
 public class PS {
+    private static char[] alphabet = {'/', '.', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0'};
+    private static char[] encodedAlphabet = {'/', '.', '1', 'g', 'i', '3', '7', 'u', '2', 'v', 'c', 'z', 'k', 'l', '4', 'o', 'f', '6', 'e', 'p', '5', 'a', '8', 's', 't', 'r', 'y', 'q', 'x', '9', 'n', 'm', '0', 'b', 'j', 'd', 'h', 'w'};
+
     private static String nome = "";
 
     private static int fome;
@@ -326,8 +334,8 @@ public class PS {
         PS.nome = nome;
     }
 
-    public static void saveGame(){
-        String state = nome;
+    public static void saveGame(Context contexto){
+        String state = "";
 
         state += "/" + fome;
         state += "/" + sede;
@@ -346,12 +354,21 @@ public class PS {
         state += "/" + programou;
         state += "/" + entrouNosStatus;
 
+        SharedPreferences sp = contexto.getSharedPreferences("mySharedPreferences", contexto.MODE_PRIVATE);
+        SharedPreferences.Editor editor = sp.edit();
+        editor.putString("save", encode(state));
+        editor.apply();
+
     }
 
-    public static void setStateByString(String state){
+    public static void loadFromSave(Context contexto){
+        final String def = "///";
+        String state =  decode(contexto.getSharedPreferences("mySharedPreferences", contexto.MODE_PRIVATE).getString("save", def));
+        if(state.equals(def)){
+            return;
+        }
         String[] splitedState = state.split("/");
 
-        nome = splitedState[0];
         fome = Integer.parseInt(splitedState[1]);
         sede = Integer.parseInt(splitedState[2]);
         energia = Integer.parseInt(splitedState[3]);
@@ -368,5 +385,23 @@ public class PS {
         entrouNaLoja = Boolean.parseBoolean(splitedState[14]);
         programou = Boolean.parseBoolean(splitedState[15]);
         entrouNosStatus = Boolean.parseBoolean(splitedState[16]);
+    }
+
+    private static String encode(String txt){
+        String encodedTxt = "";
+        for(int i = 0; i < txt.length(); i++){
+            int index = new String(alphabet).indexOf(txt.charAt(i));
+            encodedTxt += encodedAlphabet[index];
+        }
+        return  encodedTxt;
+    }
+
+    private static String decode(String encodedTxt){
+        String txt = "";
+        for(int i = 0; i < encodedTxt.length(); i++){
+            int index = new String(encodedAlphabet).indexOf(encodedTxt.charAt(i));
+            txt += alphabet[index];
+        }
+        return  txt;
     }
 }

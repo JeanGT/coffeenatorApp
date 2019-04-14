@@ -62,6 +62,7 @@ public class IgrejaActivity extends AppCompatActivity {
                         PS.changeDinheiros(-valorDoado);
                         if(valorDoado >= valorSalvar){
                             MyAlertDialogConstructor.showMessage(getString(R.string.tPadre), getString(R.string.salvarSucesso), contexto);
+                            PS.saveGame(contexto);
                         } else {
                             MyAlertDialogConstructor.showMessage(getString(R.string.tPadre), getString(R.string.salvarFracasso), contexto);
                         }

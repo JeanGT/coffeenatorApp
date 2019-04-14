@@ -49,12 +49,15 @@ public class MenuActivity extends AppCompatActivity{
     }
 
     public void onBtnJogarMenuClick(View view) {
-        PS.setTempoInicio(System.currentTimeMillis());
+        PS.setTempoInicio(System.currentTimeMillis()); //
         PS.die(this);
         MyMediaPlayer.playButtonSound(this);
         Intent intent = new Intent(this, CasaActivity.class);
         Bundle b = new Bundle();
         intent.putExtras(b);
+
+        PS.loadFromSave(this);
+
         startActivity(intent);
     }
 
