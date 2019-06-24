@@ -13,7 +13,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="com.br.ifpr.coffeenator.activitys.MainActivity">
+        <activity android:name="com.br.ifpr.coffeenator.activitys.MainActivity" android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -21,7 +21,7 @@
             </intent-filter>
         </activity>
 
-        <activity android:name="com.br.ifpr.coffeenator.activitys.CadastroActivity"></activity>
+        <activity android:name="com.br.ifpr.coffeenator.activitys.CadastroActivity" android:screenOrientation="portrait"></activity>
         <activity android:name="com.br.ifpr.coffeenator.activitys.CreditosActivity" android:screenOrientation="sensorLandscape"></activity>
         <activity android:name="com.br.ifpr.coffeenator.activitys.InstrucoesActivity" android:screenOrientation="sensorLandscape"></activity>
         <activity android:name="com.br.ifpr.coffeenator.activitys.Mapa01Activity" android:screenOrientation="sensorLandscape"></activity>
@@ -39,7 +39,6 @@
         <activity android:name="com.br.ifpr.coffeenator.activitys.BatalhaBossActivity" android:screenOrientation="sensorLandscape"></activity>
         <activity android:name="com.br.ifpr.coffeenator.activitys.MiniGameEsquivarActivity" android:screenOrientation="sensorLandscape"></activity>
         <activity android:name="com.br.ifpr.coffeenator.activitys.FinalActivity" android:screenOrientation="sensorLandscape"></activity>
-        <activity android:name="com.br.ifpr.coffeenator.activitys.DojoActivity" android:screenOrientation="sensorLandscape"></activity>
         <activity android:name=".activitys.HistoricoActivity" android:screenOrientation="sensorLandscape"></activity>
         <activity android:name=".activitys.RankingActivity" android:screenOrientation="sensorLandscape"></activity>
     </application>

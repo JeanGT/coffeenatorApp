@@ -20,32 +20,14 @@ import com.br.ifpr.coffeenator.myclasses.Gif;
 import java.io.IOException;
 
 public class CadastroActivity extends AppCompatActivity {
-    Gif gif;
-    ImageView loadingImage;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cadastro);
-
-        loadingImage = (ImageView) findViewById(R.id.imgLoadingCadastro);
-
-        //Mostra o gif de carregamento
-        Button btnLogin = findViewById(R.id.btnCadastrar);
-        btnLogin.setOnTouchListener(new View.OnTouchListener() {
-
-            @Override
-            public boolean onTouch(View v, MotionEvent event) {
-                loadingImage.setVisibility(View.VISIBLE);
-                gif = new Gif(100, loadingImage, R.drawable.fumaca03, R.drawable.fumaca02, R.drawable.fumaca01);
-                gif.play();
-                return false;
-            }
-        });
     }
 
     public void onBtnCadastrarClick(View v){
-        Log.d("meuDebug", "teste");
         String nome = ((EditText) findViewById(R.id.editTextNomeR)).getText().toString();
         String email = ((EditText) findViewById(R.id.editTextEmailR)).getText().toString();
         String senha = ((EditText) findViewById(R.id.editTextSenhaR)).getText().toString();
@@ -62,8 +44,6 @@ public class CadastroActivity extends AppCompatActivity {
                             e.printStackTrace();
                         }
                         if(deuCerto) {
-                            gif.stop();
-                            loadingImage.setVisibility(View.INVISIBLE);
                             Intent intent = new Intent(this, MainActivity.class);
                             startActivity(intent);
                         } else {
@@ -81,8 +61,6 @@ public class CadastroActivity extends AppCompatActivity {
         } else {
             Toast.makeText(this, "O nome deve possuir de 4 a 20 caracteres.", Toast.LENGTH_LONG).show();;
         }
-        loadingImage.setVisibility(View.INVISIBLE);
-        gif.stop();
     }
 
     @Override

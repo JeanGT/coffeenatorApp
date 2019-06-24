@@ -28,10 +28,6 @@ import org.json.JSONObject;
 import java.io.IOException;
 
 public class MainActivity extends AppCompatActivity {
-
-    Gif gif;
-    ImageView loadingImage;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -46,7 +42,8 @@ public class MainActivity extends AppCompatActivity {
         if(mutado){
             MyMediaPlayer.mute();
         }
-        loadingImage = (ImageView) findViewById(R.id.imgLoading);
+
+        /*
         //Mostra o gif de carregamento
         Button btnLogin = findViewById(R.id.btnLogin);
         btnLogin.setOnTouchListener(new View.OnTouchListener() {
@@ -62,13 +59,10 @@ public class MainActivity extends AppCompatActivity {
 
 //        Intent intent = new Intent(this, MenuActivity.class);
 //        startActivity(intent);
+*/
     }
 
     public void onBtnLoginClick(View v) throws InterruptedException {
-
-
-
-        TextView txtCarregando = (TextView) findViewById(R.id.txtCarregando);
         String email = ((EditText) findViewById(R.id.editTextEmailL)).getText().toString();
         String senha = ((EditText) findViewById(R.id.editTextSenhaL)).getText().toString();
 
@@ -94,13 +88,9 @@ public class MainActivity extends AppCompatActivity {
                 Log.d("meuDebug", "Erro login 3");
                 e.printStackTrace();
             }
-            gif.stop();
-            loadingImage.setVisibility(View.INVISIBLE);
             Intent intent = new Intent(this, MenuActivity.class);
             startActivity(intent);
         } else {
-            loadingImage.setVisibility(View.INVISIBLE);
-            gif.stop();
             Toast.makeText(this, "Email ou senha inválidos.", Toast.LENGTH_LONG).show();
         }
         //findViewById(R.id.loadingPanel).setVisibility(View.GONE);

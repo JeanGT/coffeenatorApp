@@ -3,53 +3,57 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:background="#303030"
+    android:background="@drawable/status_fundo"
     android:layout_height="match_parent">
 
     <TextView
         android:id="@+id/txtTituloStatus"
         android:layout_width="wrap_content"
-        android:layout_height="35dp"
-        android:layout_marginBottom="8dp"
-        android:layout_marginLeft="24dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="8dp"
+        android:layout_height="66dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
         android:gravity="center"
         android:text="Status"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        android:textSize="30sp"
-        app:layout_constraintBottom_toBottomOf="@+id/btnVoltarInstrucoes"
+        android:textSize="50sp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/btnVoltarInstrucoes" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ScrollView
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginBottom="16dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+
+        android:layout_marginTop="16dp"
+
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:background="#99000000"
+        android:scrollbarAlwaysDrawVerticalTrack="true"
+        app:layout_constraintBottom_toTopOf="@+id/txtDinheiros"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnVoltarInstrucoes">
+        app:layout_constraintTop_toBottomOf="@+id/txtTituloStatus">
 
         <android.support.constraint.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             tools:layout_editor_absoluteX="0dp"
+
+
             tools:layout_editor_absoluteY="25dp">
 
             <TextView
                 android:id="@+id/txtFome"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
-                android:layout_marginLeft="16dp"
                 android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
                 android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
                 android:text="Fome 0/10"
                 android:textAppearance="@style/TextAppearance.AppCompat.Large"
                 app:layout_constraintBottom_toTopOf="@+id/txtSede"
@@ -75,10 +79,10 @@
                 android:id="@+id/txtSede"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
-                android:layout_marginLeft="16dp"
                 android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
                 android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
                 android:text="Sede 0/10"
                 android:textAppearance="@style/TextAppearance.AppCompat.Large"
                 app:layout_constraintBottom_toTopOf="@+id/txtEnergia"
@@ -103,10 +107,10 @@
                 android:id="@+id/txtEnergia"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
-                android:layout_marginLeft="16dp"
                 android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
                 android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
                 android:text="Energia 10/10"
                 android:textAppearance="@style/TextAppearance.AppCompat.Large"
                 app:layout_constraintBottom_toTopOf="@+id/txtInteligencia"
@@ -118,10 +122,10 @@
                 style="?android:attr/progressBarStyleHorizontal"
                 android:layout_width="300dp"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp"
                 android:layout_marginEnd="16dp"
                 android:layout_marginRight="16dp"
-                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
                 android:max="101"
                 android:progress="101"
                 android:progressTint="@color/colorEnergia"
@@ -133,10 +137,10 @@
                 android:id="@+id/txtInteligencia"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
-                android:layout_marginLeft="16dp"
                 android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
                 android:layout_marginTop="7dp"
+                android:layout_marginBottom="8dp"
                 android:text="Inteligência 0/10"
                 android:textAppearance="@style/TextAppearance.AppCompat.Large"
                 app:layout_constraintBottom_toTopOf="@+id/txtFe"
@@ -161,10 +165,10 @@
                 android:id="@+id/txtFe"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
-                android:layout_marginLeft="16dp"
                 android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
                 android:layout_marginTop="6dp"
+                android:layout_marginBottom="8dp"
                 android:text="Fé 0/10"
                 android:textAppearance="@style/TextAppearance.AppCompat.Large"
                 app:layout_constraintBottom_toTopOf="@+id/txtSanidade"
@@ -189,13 +193,13 @@
                 android:id="@+id/txtSanidade"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
-                android:layout_marginLeft="16dp"
                 android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
                 android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
                 android:text="Sanidade"
                 android:textAppearance="@style/TextAppearance.AppCompat.Large"
-                app:layout_constraintBottom_toTopOf="@+id/txtDinheiros"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/txtFe" />
 
@@ -213,38 +217,38 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="@+id/txtSanidade" />
 
-            <TextView
-                android:id="@+id/txtDinheiros"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
-                android:layout_marginEnd="8dp"
-                android:layout_marginLeft="8dp"
-                android:layout_marginRight="8dp"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="14dp"
-                android:gravity="right"
-                android:text="R$ 0,00"
-                android:textAppearance="@style/TextAppearance.AppCompat.Large"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/sanidadeBar" />
-
         </android.support.constraint.ConstraintLayout>
     </ScrollView>
 
     <Button
         android:id="@+id/btnVoltarInstrucoes"
-        android:layout_width="150dp"
-        android:layout_height="60dp"
+        android:layout_width="113dp"
+        android:layout_height="45dp"
         android:layout_marginEnd="24dp"
         android:layout_marginRight="24dp"
-        android:layout_marginTop="8dp"
+        android:background="@drawable/botao"
         android:onClick="onBtnStatusVoltarClick"
         android:text="Voltar"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintBottom_toBottomOf="@+id/txtTituloStatus"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="@+id/txtTituloStatus" />
+
+    <TextView
+        android:id="@+id/txtDinheiros"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:gravity="right"
+        android:text="R$ 0,00"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="@color/colorVerde"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </android.support.constraint.ConstraintLayout>

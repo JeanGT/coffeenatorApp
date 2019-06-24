@@ -123,15 +123,15 @@
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginTop="32dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
+        android:layout_marginEnd="3dp"
+        android:layout_marginRight="3dp"
         android:background="#00000000"
         android:onClick="onBtnOpcoesClick"
         android:scaleType="fitXY"
         app:layout_constraintEnd_toStartOf="@+id/btnJogar"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView4"
-        app:srcCompat="@drawable/botao" />
+        app:srcCompat="@drawable/botao_claro" />
 
     <ImageButton
         android:id="@+id/imageButton4"
@@ -144,7 +144,7 @@
         app:layout_constraintEnd_toEndOf="@+id/imageButton7"
         app:layout_constraintStart_toStartOf="@+id/imageButton7"
         app:layout_constraintTop_toBottomOf="@+id/imageButton7"
-        app:srcCompat="@drawable/botao" />
+        app:srcCompat="@drawable/botao_claro" />
 
     <ImageButton
         android:id="@+id/imageButton5"
@@ -157,7 +157,7 @@
         app:layout_constraintEnd_toEndOf="@+id/btnOpções"
         app:layout_constraintStart_toStartOf="@+id/btnOpções"
         app:layout_constraintTop_toBottomOf="@+id/btnOpções"
-        app:srcCompat="@drawable/botao" />
+        app:srcCompat="@drawable/botao_claro" />
 
     <ImageButton
         android:id="@+id/imageButton8"
@@ -172,7 +172,7 @@
         app:layout_constraintEnd_toEndOf="@+id/btnJogar"
         app:layout_constraintStart_toStartOf="@+id/btnJogar"
         app:layout_constraintTop_toBottomOf="@+id/btnJogar"
-        app:srcCompat="@drawable/botao" />
+        app:srcCompat="@drawable/botao_claro" />
 
     <ImageButton
         android:id="@+id/btnJogar"
@@ -189,7 +189,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView4"
-        app:srcCompat="@drawable/botao" />
+        app:srcCompat="@drawable/botao_claro" />
 
     <ImageButton
         android:id="@+id/imageButton7"
@@ -206,7 +206,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/btnJogar"
         app:layout_constraintTop_toBottomOf="@+id/imageView4"
-        app:srcCompat="@drawable/botao" />
+        app:srcCompat="@drawable/botao_claro" />
 
     <TextView
         android:id="@+id/txtOpcoesM"
